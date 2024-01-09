@@ -2,6 +2,9 @@ provider "github" {
   token = "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"
 }
 
+module "aws-asg-module" {
+  source = "git@github.com:plivo/terraform-github-repository-module.git?ref=v0.0.4"
+
 # Repository details
 resource "github_repository" "aws_asg_module" {
   name        = "terraform-aws-asg-module"
@@ -38,4 +41,5 @@ resource "github_repository" "aws_asg_module" {
     "functional_voice",
     "functional_voice_api",
     "functional_zentrunk"
+  ]
 }
